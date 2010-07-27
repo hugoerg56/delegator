@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "delegator.gemspec",
      "lib/delegator.rb",
      "spec/delegator_spec.rb",
      "spec/spec.opts",
