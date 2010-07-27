@@ -1,6 +1,6 @@
 = delegator
 
-Description goes here.
+This is a gem we use to send leads to Bakedweb's backend app.
 
 == Note on Patches/Pull Requests
  
