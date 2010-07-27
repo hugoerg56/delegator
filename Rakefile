@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "delegator"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{We use this gem to send leads to Bakedweb's backend}
+    gem.description = %Q{We use this gem to send leads to Bakedweb's backend}
     gem.email = "ivan@bakedweb.net"
     gem.homepage = "http://github.com/ivanacostarubio/delegator"
     gem.authors = ["ivanacostarubio"]
