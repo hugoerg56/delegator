@@ -5,7 +5,7 @@ require 'rubygems'
 require 'fakeweb'
 require 'delegator'
 
-FakeWeb.register_uri(:get, "admin.bolsitosdecolores.com/people", :body => "success")
+FakeWeb.register_uri(:get, "admin.bolsitosdecolores.com/people.json", :body => "success")
 
 
 describe Bakedweb do
@@ -38,9 +38,17 @@ describe Bakedweb do
   end
   
   describe "Sending data with RestClient" do 
+    before(:all) do 
+      params = {:person => { :email => "ivan@bakedweb.net", :nombre => "ivanho", :telefono => "3057737020", :account => "bakedweb"} }
+      @response = Bakedweb::Delegator.envia(params)
+    end
+    
     it "should use restclient" do
-      params = {:person => { :email => "ivan@bakedweb.net", :nombre => "3057737020", :telefono => "3057737020", :account => "bakedweb"} }
-      Bakedweb::Delegator.envia(params).class.should == String
+      @response.class.should == String
+    end
+    
+    it "should return 201 for response" do
+      @response.code.should == 201
     end
   end
 end

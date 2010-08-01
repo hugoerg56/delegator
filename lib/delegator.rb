@@ -8,7 +8,7 @@ class Bakedweb
       raise "WrongNumberOfParams" if params[:person][:telefono] == nil
       raise "WrongNumberOfParams" if params[:person][:email] == nil
       raise "WrongNumberOfParams" if params[:person][:account] == nil
-      RestClient.post 'admin.bolsitosdecolores.com/people', params
+      RestClient.post 'admin.bolsitosdecolores.com/people.json', params
     end
   end
 end

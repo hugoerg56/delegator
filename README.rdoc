@@ -1,6 +1,19 @@
-= delegator
+= Delegator
 
-This is a gem we use to send leads to Bakedweb's backend app.
+Capture leads data, follow up later with canned responses and email marketing. 
+
+== Usage:
+
+You send with a form: 
+
+params = {:person => { :email => "ivan@bakedweb.net", :nombre => "IvanHo", :telefono => "3057737020", :account => "bakedweb"} } 
+Bakedweb::Delegator.envia(params)
+
+
+== +
+
+delegator.bakedweb.net
+
 
 == Note on Patches/Pull Requests
  
