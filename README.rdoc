@@ -9,7 +9,7 @@ Capture leads data, follow up later with canned responses and email marketing.
 
 ===== The most basic form of lead. 
 
-  params = { :person => { :email => "ivan@bakedweb.net", :nombre => "IvanHo", :telefono => "3057737020", :account => "bakedweb"}} 
+  params = { :person => { :email => "ivan@bakedweb.net", :nombre => "IvanHo", :telefono => "3057737020", :account => "bakedweb", :opportunities_attributes => { 0 => {:more_data => 'example'}}}}
 
   Bakedweb::Delegator.envia(params)
 
